@@ -1,0 +1,27 @@
+
+
+#inputField {
+    margin: 0 auto;
+    width: 100%;
+    
+}
+
+li {
+    float: left;
+    overflow: 0;
+    clear: right;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+#submit {
+    margin-left: 28%;
+    margin-top: 5%;
+    width: 150px;
+}
+
+.pick {
+    width: 150px;
+}
