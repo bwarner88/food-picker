@@ -4,7 +4,9 @@ $(document).ready(function () {
 
 
     var onClick = function () {
-        $('#submit').on('click', function () {
+       
+        $('#submit').on('click', function (event) {
+            event.preventDefault();
             var userInput = $('#inputField').val();
             $('.choicesField').append('<ul>' + '<li>' + userInput + '</li>' + '</ul>');
             $('#inputField').val('')
@@ -13,16 +15,16 @@ $(document).ready(function () {
         });
     }
 
-    var foodRandom = function() {
-    $('.pick').on('click', function () {
-        var yourDinner = placesToEat[Math.floor(Math.random() * placesToEat.length)]
+    var foodRandom = function () {
+        $('.pick').on('click', function () {
+            var yourDinner = placesToEat[Math.floor(Math.random() * placesToEat.length)]
 
-        $('.resultsField').append(yourDinner)
+            $('.resultsField').append(yourDinner)
 
-    })
-}
+        })
+    }
 
-onClick();
-foodRandom();
+    onClick();
+    foodRandom();
 
 });
